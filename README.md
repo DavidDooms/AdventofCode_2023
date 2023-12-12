@@ -10,4 +10,5 @@ My take to find the answers on the Advent of Code 2023.
 6) Part one and two
 7) Not started
 8) Not started
-9) Ongoing
+9) Part one and two
+10) 

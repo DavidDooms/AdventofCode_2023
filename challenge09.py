@@ -58,6 +58,14 @@ def complete_patern(dic: dict):
     return dic
 
 
+def complete_patern_front(dic: dict):
+    m = max(dic.keys())
+    dic[m].insert(0, 0)
+    for i in range(m - 1, -1, -1):
+        dic[i].insert(0, dic[i][0] - dic[i + 1][0])
+    return dic
+
+
 if __name__ == "__main__":
     #  check = [read_info(t) for t in lines]
     #  check_sum = [np.sum(c[:, -1]) for c in check]
@@ -65,10 +73,20 @@ if __name__ == "__main__":
     #  print(check_sum)
     #  print(sum(check_sum))
 
+    """Part one
     check = [fill_patern(t) for t in data]
     print(check)
     test = [complete_patern(c) for c in check]
     print(test)
     result = [d[0][-1] for d in test]
+    print(result)
+    print(sum(result))"""
+
+    """Part two"""
+    check = [fill_patern(t) for t in data]
+    print(check)
+    test = [complete_patern_front(c) for c in check]
+    print(test)
+    result = [d[0][0] for d in test]
     print(result)
     print(sum(result))
