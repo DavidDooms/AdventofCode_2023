@@ -11,4 +11,6 @@ My take to find the answers on the Advent of Code 2023.
 7) Not started
 8) Not started
 9) Part one and two
-10) 
+10) Not started
+11) Not started
+12) Read question and had a panic attack but let's go
