@@ -13,4 +13,5 @@ My take to find the answers on the Advent of Code 2023.
 9) Part one and two
 10) Not started
 11) Not started
-12) Read question and had a panic attack but let's go
+12) Part one done, Part two takes too much time to run...
+13) 

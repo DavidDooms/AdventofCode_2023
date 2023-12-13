@@ -27,6 +27,13 @@ def adapt_input(list_in: list):
     return list_out
 
 
+def unfold(list_in: list):
+    list_out = []
+    for ele in list_in:
+        list_out.append(((ele[0] + "?")*4 + ele[0], ele[1]*5))
+    return list_out
+
+
 def checker(patern: str, damaged: list):
     l_patern = patern.split(".")
     l_patern = [len(x) for x in l_patern]
@@ -38,20 +45,23 @@ def checker(patern: str, damaged: list):
 
 
 def fill(patern: str, damaged: list):
-    sum = 0
+    som = 0
     if "?" not in patern:
-        sum += checker(patern, damaged)
-        return sum
+        som += checker(patern, damaged)
+        return som
     else:
         return fill(patern.replace("?", ".", 1), damaged) + fill(patern.replace("?", "#", 1), damaged)
 
 
 if __name__ == "__main__":
-    data = adapt_input(lines)
+    data = adapt_input(test_code)
     print(data)
 
-    check = [checker(d[0], d[1]) for d in data]
-    print(check)
+    data = unfold(data)
+    print(data)
+
+    # check = [checker(d[0], d[1]) for d in data]
+    # print(check)
 
     test = [fill(d[0], d[1]) for d in data]
     print(test)
